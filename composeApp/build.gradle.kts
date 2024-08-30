@@ -5,6 +5,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidApplication)
+    alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
 }
@@ -33,8 +34,16 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+            implementation(libs.ktor.client.okHttp)
+            implementation(libs.android.driver)
+            implementation(libs.koin.android)
         }
+
         commonMain.dependencies {
+            api(libs.koin.core)
+            api(libs.koin.compose)
+
+            implementation(compose.material3)
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material)
@@ -43,6 +52,22 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
+            implementation(libs.bundles.ktor.common)
+            implementation(libs.bundles.voyager.common)
+            implementation(libs.coroutines.extensions)
+            implementation(libs.sqlDelight.runtime)
+            implementation(libs.touch.lab)
+
+            api(libs.multiplatformSettings.noArg)
+            api(libs.multiplatformSettings.coroutines)
+        }
+
+        iosMain.dependencies {
+            implementation(libs.ktor.client.ios)
+            implementation(libs.native.driver)
+
+            @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
+            implementation(compose.components.resources)
         }
     }
 }

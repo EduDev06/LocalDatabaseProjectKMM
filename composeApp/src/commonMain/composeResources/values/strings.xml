@@ -1,0 +1,20 @@
+<resources>
+    <string name="focus_sessions">Focus Sessions</string>
+    <string name="add_task">Add your first task</string>
+    <string name="task_name">Task Name</string>
+    <string name="task_description">Description</string>
+    <string name="task_type">Task Type</string>
+    <string name="save_task">Save Task</string>
+    <string name="update_task">Update Task</string>
+    <string name="delete_task">Delete Task</string>
+    <string name="task_added">Task Added</string>
+    <string name="task_removed">Task Removed</string>
+    <string name="task_updated">Task Updated</string>
+    <string name="go_to_home">Go to home</string>
+    <string name="task_name_placeholder">Enter task name</string>
+    <string name="task_description_placeholder">Enter Description</string>
+    <string name="task_description">Task Description</string>
+    <string name="settings_title">Settings</string>
+    <string name="theme_setting">Theme</string>
+    <string name="subtitle_theme_setting">App Theme(%1$s)</string>
+</resources>
