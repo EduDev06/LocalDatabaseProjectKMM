@@ -2,7 +2,6 @@
     <string name="focus_sessions">Focus Sessions</string>
     <string name="add_task">Add your first task</string>
     <string name="task_name">Task Name</string>
-    <string name="task_description">Description</string>
     <string name="task_type">Task Type</string>
     <string name="save_task">Save Task</string>
     <string name="update_task">Update Task</string>
